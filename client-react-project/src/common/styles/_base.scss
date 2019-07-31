@@ -1,0 +1,48 @@
+@import "./font";
+@import "./variables";
+
+*,
+*::after, /* add to apply box-sizing */
+*::before { /* add to apply box-sizing */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; /* inherit from body box-sizing*/
+  font: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+
+  font-family: mallory,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  color: $font;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: none;
+}
+
+button {
+  border: none;
+}
+
+ol {
+  list-style-type: none
+}
+
+ul {
+  list-style-type: none
+}

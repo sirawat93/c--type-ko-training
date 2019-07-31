@@ -1,0 +1,45 @@
+@import "../../common/styles/variables";
+@import "../../common/styles/mixins";
+
+.Sidebar {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, rgba($white, .85) , rgba($white, .85)), url("../../common/images/bg.png");
+    background-size: cover;
+    background-position: right center;
+}  
+
+.SideNav {
+    font-size: 1.4rem;
+    &__Link:link,
+    &__Link:visited {
+      @include flex(flex-start, center);
+      padding: 1rem 1.5rem;
+      margin: 1rem 1.5rem;
+      border-radius: 3px;
+      color: $grey-dark;
+    }
+    &__Link:hover {
+        background-color: $violet;
+        color: $white;
+    }
+    &__Icon {
+        width: 4rem;
+    }
+    &__Title {
+        font-size: 2rem;
+        text-align: center;
+        color: $black;
+        padding: 2rem 0rem;
+        border-bottom: 1px solid $border;
+        margin-bottom: 1rem;
+    }
+}
+
+.Legal {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1.3rem;
+    color: #8B8C92;
+    position: absolute;
+    bottom: 0;
+}

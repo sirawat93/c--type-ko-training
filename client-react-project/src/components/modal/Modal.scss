@@ -1,0 +1,32 @@
+@import "../../common/styles/variables";
+@import "../../common/styles/mixins";
+
+.OnSearchFocus {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba($color: $black, $alpha: 0.6);
+}
+  
+.ModalLoding {
+    @include flex(center,  flex-start);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background-color: rgba($color: $black, $alpha: 0.6);
+    
+    &__Icon {
+        padding: 2rem;
+        border-radius: 5px;
+        background-color: $white;
+        position: relative;
+        top: 200;
+        height: 80px;
+    }
+}

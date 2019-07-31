@@ -1,0 +1,207 @@
+@import "../../common/styles/variables";
+@import "../../common/styles/mixins";
+
+.propertyContainer {
+    display: flex;
+    width: 60vw;
+    margin-top: 2rem;
+    font-size: 1rem;
+    box-shadow: 0.5px 0.5px 0px 1px $border;
+
+    @media only screen and (max-width: $bp-small) {
+        width: 20rem;
+        margin-right: 2.5rem;
+        margin-top: 4rem;
+        padding: 0 1rem 0 1rem;
+    }
+}
+
+.Property__Left {
+    display: flex;
+    flex: 0.6 0 65%;
+    background-color: $white-grey;
+
+    @media only screen and (max-width: $bp-small) {
+        display: none;
+    }
+
+    .PropertyInfo {
+        display: block;
+        padding: 1rem;
+        &__Title {
+            color: grey;
+            font-size: 1.5rem;
+        }
+        &__Location {
+            @include flex(flex-start,  center);
+            color:$blue-sunshine;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: .5rem;
+        }
+        &__StarIcon {
+            color: $orange-light;
+            font-size: 1.7rem;
+            margin-right: .5rem;
+        }
+        &__LocationIcon {
+            color: $blue-sunshine;;
+            font-size: 1.2rem;
+            margin-right: .5rem;
+            margin-left:.5rem;
+        }
+    
+        .PropertyOption {
+            @include list-option-offer($orange)
+        }
+        .PropertyOffer {
+            @include list-option-offer($green)
+        }
+        &__Exception {
+            display: inline-block;
+            border: 1px solid;
+            padding: 0px 5px;
+            background-color: white;
+            color: $violet-sunshine;
+            border-radius: .4rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 1.5rem;
+        }
+        &__UrgentText {
+            color: orangered;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+    }
+
+    .PropertyImage {
+        width: 20rem;
+        &__Img {
+            height: 17rem;
+            width: 100%;
+            background-size: auto;
+        }
+        .PropertyGalleryList {
+            display: flex;
+        }
+        &PropertyGallery {
+            width: 6.34rem;
+            height: 5rem;
+            margin-top: 0.2rem;
+            &:not(:last-child) {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
+
+.Property__Right {
+    flex-grow: 0.4;
+    @include flex(space-between,  flex-end);
+    flex-direction: column;
+    
+    @media only screen and (max-width: $bp-small) {
+        display: none;
+    }
+     
+    .PropertyReviewScore {
+        display: flex;
+        margin: .5rem;
+        &__Total {
+            text-align: end;
+            color: $grey-dark;
+        }
+        &__Point {
+            background-color: $blue-light;
+            border-radius: 3px;
+            font-size: 2rem;
+            padding: .6rem;
+            color: white;
+            margin-left: 1rem;
+        }
+    }
+
+    .PropertyPrice {
+        @include flex(flex-start, flex-end);
+        flex-direction: column;
+        margin-right: .5rem;
+        &__Discount {
+            background-color: $red;
+            padding: .5rem 1.5rem;
+            color: $white;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-right: -1rem;
+            text-align: center;
+            border-radius: 2px;
+            margin-bottom: .5rem;
+        }
+        &__From {
+            margin-bottom: .1rem;
+            font-size: 1.8rem;
+            text-decoration-line: line-through;
+        }
+        &__To {
+            margin-bottom: .5rem;
+            color: $red;
+            font-size: 1.6rem;
+        }
+        &__Warning {
+            color: $grey-dark;
+            @include flex(flex-end,  center);
+            margin-bottom: .5rem;
+            span {
+                margin-left: .3rem;
+            }
+        }
+        &__Emergency {
+            color: $red;
+            margin-bottom: .5rem;
+        }
+    }
+}
+
+.Property__Small {
+    display: none;
+    @media only screen and (max-width: $bp-small) {
+        @include flex( space-between, flex-start);
+        flex-direction: column;
+
+       .Property__Title {
+            color: grey;
+            font-size: 1.5rem;
+        }
+        .Property__Img {
+            width: 100%;
+            background-size: auto;
+            height: 10rem;
+            border-radius: 2px;
+            position: relative;
+            top: -1.5rem;
+        }
+        .Property__Location {
+            @include flex(flex-start,  center);
+            color:$blue-sunshine;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: .5rem;
+        }
+        .Property__LocationIcon {
+            color: $blue-sunshine;;
+            font-size: 1.5rem;
+            margin-right: .5rem;
+        }
+        .Property__Warning {
+            @include flex(flex-start,  center);
+            border-top: 1px solid $border;
+            margin: 1.5rem 0 0rem 0;
+            padding: 1rem 0 1rem 0;
+            color: grey;
+            width: 100%;
+            span {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,198 @@
+@import "../../common/styles/variables";
+@import "../../common/styles/mixins";
+
+.HotelDetailPage {
+    flex-grow: 1;
+    margin: 3rem;
+    font-size: 1.3rem;
+}
+
+.HotelDeInfoReview {
+    @include flex(space-between,  flex-start);
+    border-bottom: 1px solid $border;
+    padding: 1.5rem 0;
+    margin: 1rem 0;
+
+    .HotelDeInfo {
+        &__Title {
+            display: inline;
+            color: $grey;
+            font-size: 2rem;
+            margin-right: 1.5rem;
+        }
+        &__StarIcon {
+            color: $orange-light;
+            font-size: 1.7rem;
+            margin-right: .5rem;
+        }
+        &__Location {
+            color:$blue-sunshine;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: .5rem 0;
+        }
+        &__LocationIcon {
+            color: $blue-sunshine;;
+            font-size: 1.2rem;
+            margin-right:.5rem;
+        }
+    }
+
+    .HotelDeReview {
+        .HotelDeReviewScore {
+            display: flex;
+            justify-content: flex-end;
+            margin: .5rem;
+            &__Total {
+                text-align: end;
+            }
+            &__Point {
+                background-color: $blue-light;
+                border-radius: 3px;
+                font-size: 2rem;
+                padding: .6rem;
+                color: white;
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+.HotelDeTransport {
+    @include flex(space-between,  center);
+    border-bottom: 1px solid $border;
+    padding: 1.5rem 0;
+    margin: 1rem 0;
+    &__Title {
+        color: $grey;
+        font-size: 1.5rem;
+        flex-grow: 0.1;
+    }
+    &__Offers {
+        flex-grow: 0.9;
+        @include flex(space-around,  center);
+        .HotelDeTransport__EachOffer {
+            text-align: center;
+            width: 20rem;
+            i {
+                color: $green;
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+            p {
+                color: $blue-sunshine;
+            }
+        }
+    }
+}
+  
+.HotelDeChoicePrice {
+    @include flex(space-between,  flex-start);
+    border-bottom: 1px solid $border;
+    padding: 1.5rem 0;
+    margin: 1rem 0;
+    position: relative;
+    .HotelDeChoice {
+        &__Title {
+            font-size: 2rem;
+        }
+        &__Title + p {
+            font-size: 1.1rem;
+            color: $grey;
+        }
+        &__Filter {
+            font-weight: bold;
+            position: absolute;
+            bottom: 1.5rem;
+        }
+    }
+
+    .hotelDePrice {
+        &__Noti {
+            padding: .5rem 1rem;
+            font-size: 1.5rem;
+            color: $blue-light;
+            border: 1px solid $blue-light;
+            text-align: center;
+            > i {
+                margin-right: 1.5rem;
+            }
+        }
+        &__Guarantee {
+            color: $blue-light;
+            margin: 2rem 0;
+        }
+        &__Clear {
+            text-align: end;
+            font-size: 1.25rem;
+            color: $grey;
+        }
+    }
+}
+
+.HotelDeOptions {
+    @include flex(flex-start,  center);
+    padding: 1.5rem 0;
+    &__EachOption {
+        padding: .5rem 1rem;
+        border: 1px solid $border;
+        border-radius: 2rem;
+        margin: 0 1rem 1rem 0;
+        > i {
+            margin-right: .5rem;
+        }
+    }
+}
+
+.HotelDePopularity {
+    @include flex(space-around,  center);
+    background-color: #FFF9F2;
+    padding: 1.25rem 2em;
+    &__EachPop {
+        @include flex(flex-start,  center);
+        i {
+            color: $orange-light;
+            font-size: 3rem;
+            margin-right: 1rem;
+        }
+        .HotelDePopularity__Text {
+            color: $grey-dark;
+            padding: 1rem 0;
+        }
+        .HotelDePopularity__Text--link {
+            color: $blue-light;
+        }
+        &:not(:last-child) {
+            padding-right: 2rem;
+            border-right: 1px solid $orange;
+            margin-right: 2rem;
+        }
+    }
+}
+
+.HotelDeImageStatus {
+    @include flex(space-between,  flex-start);
+    border: 1px solid $border;
+    background-color: #F7F7F7;
+    margin: 2rem 0;
+    .HotelDeImage {
+        width: 50%;
+        display: flex;
+        padding: 1rem;
+        img {
+            height: 17rem;
+            width: 17rem;
+            padding-right: 1.5rem;
+        }
+        b {
+            font-weight: bold;
+        }
+        border-right: 1px solid $border;
+    }
+    .HotelDeStatus {
+        width: 50%;
+        @include flex(center, flex-start);
+        align-self: center;
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,17 @@
+@import "../../common/styles/variables";
+@import "../../common/styles/mixins";
+
+.SearchHeader {
+    &__SuggestList {
+        background-color: $white;
+        height: 21rem;
+        width: 43.1rem;
+        position: absolute;
+        top: 50;
+        overflow: overlay;
+    }
+    &__SuggestListLoading {
+        @include flex(center, center);
+        height: 21.2rem;
+    }
+}

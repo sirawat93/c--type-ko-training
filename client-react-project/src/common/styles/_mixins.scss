@@ -1,0 +1,63 @@
+@import './variables';
+
+@mixin list-option-offer($color) {
+    display: flex;
+    margin: 1rem 0;
+    color: $color;
+    flex-wrap: wrap;
+
+    &__title {
+        @include flex(flex-start, center);
+        background-color: $color;
+        color: white;
+        margin-top: .5rem;
+        align-items: center;
+        padding: 0 .5rem;
+        border-radius: .4rem 0 0 .4rem;
+    }
+
+    &__badge {
+        @include flex(flex-start, center);
+        white-space: nowrap;
+        font-size: .8rem;
+        font-weight: bold;
+        padding: .3rem;
+        margin-top: .5rem;
+        border-radius: 3px 0 0 3px;
+        box-shadow: 0 .5px 1px 0 rgba(#000, 0.2);
+        background-color: white;
+
+        &:not(:last-child) {
+            margin-right: 0.2rem;
+        }
+        &:last-child {
+            border-radius: 0 .4rem .4rem 0;                 
+        }
+        span {
+            font-size: 1rem;
+            font-weight: bold;
+            padding: .3rem;
+        }
+    }
+}
+
+@mixin hostInfo-card-box($leftColor, $rightColor) {
+    @include flex(center, center);
+    width: 6rem;
+    height: 6rem;
+    background-image: linear-gradient(to right, rgba($leftColor,1), rgba($rightColor,1) );
+    position: relative;
+    top: -1.5rem;
+    border-radius: .2rem;
+}
+
+@mixin hotel-detail-card() {
+    @include flex(space-between, flex-start);
+    border-bottom: 2px solid $border;
+}
+
+@mixin flex($just, $align) {
+    display: flex;
+    justify-content: $just;
+    align-items:  $align;
+}

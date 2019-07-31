@@ -1,0 +1,10 @@
+@import "../../common/styles/variables";
+
+.HotelList {
+    margin: 0 0 2rem 2rem;
+    @media only screen and (max-width: $bp-small) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+

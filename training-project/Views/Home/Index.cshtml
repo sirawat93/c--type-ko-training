@@ -1,0 +1,27 @@
+﻿@*@model IEnumerable<training_project.Models.CommentModel>
+@{
+    Layout = null;
+}*@
+<html>
+<head>
+    <title>Hello React</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/dist/style.css")">
+</head>
+<body>
+<div id="root"></div>
+@*@Html.React("CommentBox", new
+{
+    initialData = Model,
+    url = Url.Action("Comments"),
+    submitUrl = Url.Action("AddComment"),
+    pollInterval = 2000,
+})*@
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.0/umd/react.development.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.6.0/prop-types.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/remarkable/1.7.1/remarkable.min.js"></script>
+<script src="@Url.Content("~/dist/bundle.js")"></script>
+@Html.ReactInitJavaScript()
+</body>
+</html>

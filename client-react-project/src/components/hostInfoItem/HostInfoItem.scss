@@ -1,0 +1,65 @@
+@import "../../common/styles/mixins";
+@import "../../common/styles/variables";
+
+.HostInfo {
+    display: grid;
+    grid-template-rows:  4rem 4rem 1fr;
+    grid-template-columns: [card-start] 6rem [card-mid] max-content [card-end];
+    padding: 0 1rem;
+    border-radius: 3px;
+    box-shadow: 0.5px 0.5px 5px 1px $border;
+    margin: 3.5rem 2rem 0 0;
+
+    &:not(:last-child) {
+        margin-right: 3rem;
+    }
+    &__Box--orange {
+        @include hostInfo-card-box($orange, $orange-dark)
+    }
+    &__Box--green {
+        @include hostInfo-card-box($green, $green-dark)
+    }
+    &__Box--red {
+        @include hostInfo-card-box($red, $red-dark)
+    }
+    &__Box--blue {
+        @include hostInfo-card-box($blue, $blue-dark)
+    }
+    &__MainIcon {
+        margin: 30px auto;
+        color: $white;
+        font-size: 2rem;
+    }
+    &__Title {
+        color: $grey-dark;
+        padding: 1rem 0 0 1rem;
+        text-align: right;
+    }
+    &__Detail {
+        grid-column: card-mid / card-end;
+        padding-top: .5rem;
+        font-size: 2rem;
+        padding: .5rem;
+        text-align: right;
+    }
+    &__Footer {
+        grid-column: card-start / card-end;
+        border-top: 1px solid $border;
+        padding: 1rem 0rem 1rem 0rem;
+        @include flex(flex-start, center);
+        .HostInfo__Icon {
+            color: $grey-dark;
+        }
+        .HostInfo__Warning {
+            margin-left: .5rem;
+            color: $grey-dark;
+        }
+        .HostInfo__Icon--redBG {
+            color: red;
+        }
+        .HostInfo__Warning--blueBG {
+            margin-left: .5rem;
+            color:$violet-light; 
+        }
+    }
+}

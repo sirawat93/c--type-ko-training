@@ -1,0 +1,11 @@
+@import "../../common/styles/variables";
+
+.Suggestion {
+    padding: 1rem;
+    border-bottom: 1px solid $border;
+    color: black;
+    &:hover {
+        background-color: $blue-light;
+        color: $white;
+    }
+}
