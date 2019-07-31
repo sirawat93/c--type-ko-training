@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'mallory';
+    src: url('../webfonts/mallory-light-webfont-v01.eot');
+    src:
+        url('../webfonts/mallory-light-webfont-v01.eot?#iefix') format('embedded-opentype'),
+        url('../webfonts/mallory-light-webfont-v01.woff2') format('woff2'),
+        url('../webfonts/mallory-light-webfont-v01.woff') format('woff'),
+        url('../webfonts/mallory-light-webfont-v01.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mallory';
+    src: url('../webfonts/Mallory-Book.eot');
+    src:
+        url('../webfonts/Mallory-Book.eot?#iefix') format('embedded-opentype'),
+        url('../webfonts/Mallory-Book.woff2') format('woff2'),
+        url('../webfonts/Mallory-Book.woff') format('woff'),
+        url('../webfonts/Mallory-Book.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mallory';
+    src: url('../webfonts/mallory-medium.eot');
+    src:
+        url('../webfonts/mallory-medium.eot?#iefix') format('embedded-opentype'),
+        url('../webfonts/mallory-medium.woff2') format('woff2'),
+        url('../webfonts/mallory-medium.woff') format('woff'),
+        url('../webfonts/mallory-medium.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

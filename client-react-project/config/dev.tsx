@@ -1,0 +1,6 @@
+export default {
+    "HOST_TYPE": "development",
+    "API_DOMAIN": "http://localhost:24160/api/",
+    "PORT": 24160
+}
+  
